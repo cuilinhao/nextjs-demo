@@ -18,7 +18,7 @@ export default function Home() {
           <li
             key={num}
             /* 200 高度 + 浅绿背景 + 圆角4边框 + hover 变色 */
-            className="h-[96px] flex items-left border border-gray-300 rounded mb-2 px-4"
+            className="h-[96px] flex items-center border border-gray-300 rounded mb-2 px-4"
             style={{ backgroundColor: '#f0fdf4' }} // 浅绿色背景
           >
             {/* 头像图片：50x50 圆角 */}
@@ -32,12 +32,12 @@ export default function Home() {
               />
             </div>
 
-            {/* 链接占满剩余空间；字体 26px；水平居中 */}
+            {/* 链接文本；字体 26px；左对齐 */}
             <Link
               href={`/item/${num}`}
-              className="flex-1 text-center text-[26px]"
+              className="flex-1 text-left text-[26px]"
             >
-              第 {num} 行，点我查看
+              第 {num} 行，<span className="text-purple-300">点我查看</span>
             </Link>
           </li>
         ))}
