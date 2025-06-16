@@ -16,6 +16,17 @@ export default function Home() {
     return `第 ${rowNumber} 行，点我查看`;
   };
 
+  // 获取指定行的跳转链接
+  const getRowLink = (rowNumber: number) => {
+    if (rowNumber === 1) {
+      return '/files/page-a';
+    }
+    if (rowNumber === 2) {
+      return '/files/page-b';
+    }
+    return `/item/${rowNumber}`;
+  };
+
   return (
     <main className="flex-1 flex flex-col items-center p-4">
       <h1 className="text-2xl font-bold mb-4">滑动列表</h1>
@@ -42,7 +53,7 @@ export default function Home() {
 
             {/* 链接文本；字体 26px；左对齐 */}
             <Link
-              href={`/item/${num}`}
+              href={getRowLink(num)}
               className="flex-1 text-left text-[26px] no-underline"
               style={{ color: '#f97316' }}
             >
