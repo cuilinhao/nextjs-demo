@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className="bg-red-200 h-screen">
-      hello world
+    <div className='bg-amber-400 h-screen'>
+      Performance
     </div>
   )
 }

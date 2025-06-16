@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+     "baseUrl": ".", // 表示根目录
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./app/*"] // 把 @ 映射到 app 目录（你Header就在 app/components）
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
