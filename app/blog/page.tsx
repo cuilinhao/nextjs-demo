@@ -1,5 +1,6 @@
 
-"use client"
+// "use client"
+
 import React from 'react'
 
 import { List, Avatar } from 'antd'
@@ -7,24 +8,18 @@ import { List, Avatar } from 'antd'
 import {data} from '@/data'
 import Link from 'next/link'
 
+import { Metadata } from 'next'
 
+import BlogList from '@/components/bloglist'
+
+
+export const metadata: Metadata = {
+  title: '博客列表',
+  description: '博客列表',
+}
 
 export default function page() {
   return (
-    <List
-    className='bg-green-300'
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={(item, index) => (
-      <List.Item>
-        <List.Item.Meta
-        className='!items-center'
-          avatar={<Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`} />}
-          title={<Link href={`/blog/${item.id}`}>{item.title}</Link>}
-
-        />
-      </List.Item>
-    )}
-  />
+    <BlogList />
   )
 }
