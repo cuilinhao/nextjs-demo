@@ -2,16 +2,12 @@
 
 import { useState } from "react";
 
-export default function Page({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function Page() {
 
     return (
         <div >
             <h2> About Content</h2>
-            {children}
+
         </div>
     );
 }
