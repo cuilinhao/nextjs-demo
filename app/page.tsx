@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>
-      hello world
+    <div className='bg-green-500'>
+      home
     </div>
   )
 }
