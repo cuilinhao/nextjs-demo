@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Comforter } from "next/font/google";
 import "./globals.css";
 // import Header from "@/components/Header";
 
@@ -7,9 +7,10 @@ import "./globals.css";
 
 import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const comforter = Comforter({
+  variable: "--font-comforter",
   subsets: ["latin"],
+  weight: "400"
 });
 
 const geistMono = Geist_Mono({
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${comforter.variable} ${geistMono.variable} antialiased`}
       >
 
         {children}
