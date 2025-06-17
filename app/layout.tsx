@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Comforter } from "next/font/google";
+import { Geist_Mono, Comforter } from "next/font/google";
 import "./globals.css";
 // import Header from "@/components/Header";
 
 
 
-import Link from "next/link";
+// import Link from "next/link";
 
 const comforter = Comforter({
   variable: "--font-comforter",

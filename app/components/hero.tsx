@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image'
 
 
 interface HeroProps {
-    imgUrl: string;
+    imgUrl: string | StaticImageData ;
     altTxt: string;
     content: string;
 }
